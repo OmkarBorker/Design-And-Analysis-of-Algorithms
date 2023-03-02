@@ -142,18 +142,11 @@ def merge(arr, l, m, r):
         j += 1
         k += 1
 
-# l is for left index and r is right index of the
-# sub-array of arr to be sorted
-
-
 def mergeSort(arr, l, r):
     if l < r:
 
-        # Same as (l+r)//2, but avoids overflow for
-        # large l and h
         m = l+(r-l)//2
 
-        # Sort first and second halves
         mergeSort(arr, l, m)
         mergeSort(arr, m+1, r)
         merge(arr, l, m, r)
@@ -181,9 +174,6 @@ def insertionSort(arr):
 
         key = arr[i]
 
-        # Move elements of arr[0..i-1], that are
-        # greater than key, to one position ahead
-        # of their current position
         j = i-1
         while j >= 0 and key < arr[j]:
             arr[j+1] = arr[j]
