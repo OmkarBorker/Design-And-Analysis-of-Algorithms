@@ -5,5 +5,5 @@ Repository aimed at visualising the complexcity of algorithms using graphs and d
 ![alt text](https://github.com/OmkarBorker/Design-And-Analysis-of-Algorithms/blob/main/Images/Combined_Graphs.png)
 
 # 2)Integer Multiplication
-<br/>
+<br><br/>
 ![alt text](https://github.com/OmkarBorker/Design-And-Analysis-of-Algorithms/blob/main/Images/Multiplication.png)
