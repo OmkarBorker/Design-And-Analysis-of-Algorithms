@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 
 def heapify(arr, n, i):
     largest = i  # Initialize largest as root
-    l = 2 * i + 1  # left = 2*i + 1
-    r = 2 * i + 2  # right = 2*i + 2
+    l = 2 * i + 1  
+    r = 2 * i + 2  
 
  # See if left child of root exists and is
  # greater than root
@@ -38,9 +38,6 @@ def heapify(arr, n, i):
 def heapSort(arr):
     n = len(arr)
 
- # Build a maxheap.
- # Since last parent will be at ((n//2)-1) we can start at that location.
-
     for i in range(n // 2 - 1, -1, -1):
         heapify(arr, n, i)
 
@@ -62,8 +59,6 @@ def partition(array, low, high):
     # pointer for greater element
     i = low - 1
 
-    # traverse through all elements
-    # compare each element with pivot
     for j in range(low, high):
         if array[j] <= pivot:
 
@@ -86,9 +81,6 @@ def partition(array, low, high):
 def quickSort(array, low, high):
     if low < high:
 
-        # Find pivot element such that
-        # element smaller than pivot are on the left
-        # element greater than pivot are on the right
         pi = partition(array, low, high)
 
         # Recursive call on the left of pivot
@@ -103,21 +95,19 @@ def merge(arr, l, m, r):
     n1 = m - l + 1
     n2 = r - m
 
-    # create temp arrays
     L = [0] * (n1)
     R = [0] * (n2)
 
-    # Copy data to temp arrays L[] and R[]
+
     for i in range(0, n1):
         L[i] = arr[l + i]
 
     for j in range(0, n2):
         R[j] = arr[m + 1 + j]
 
-    # Merge the temp arrays back into arr[l..r]
-    i = 0     # Initial index of first subarray
-    j = 0     # Initial index of second subarray
-    k = l     # Initial index of merged subarray
+    i = 0     
+    j = 0    
+    k = l     
 
     while i < n1 and j < n2:
         if L[i] <= R[j]:
