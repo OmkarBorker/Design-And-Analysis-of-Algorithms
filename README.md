@@ -13,3 +13,7 @@ This Repository contains implementation of the key techniques used in algorithm 
 ### 3)Matrix Operations
 
 ![alt text](https://github.com/OmkarBorker/Design-And-Analysis-of-Algorithms/blob/main/Images/MatrixOperations.png)
+
+### 4)Searching Algorithms
+
+![alt text](https://github.com/OmkarBorker/Design-And-Analysis-of-Algorithms/blob/main/Images/Searching.png)
