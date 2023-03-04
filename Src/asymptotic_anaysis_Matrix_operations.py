@@ -18,7 +18,7 @@ def MatAdd(A,B,C):
             result[i][j] = A[i][j] + B[i][j]
 
 def timefunction(elements, times, fun):
-    for i in range(1, 8):
+    for i in range(1, 20):
 
         a = randint(0, 10, (100 * i,100 * i))
         b = randint(0, 10, (100 * i,100 * i))

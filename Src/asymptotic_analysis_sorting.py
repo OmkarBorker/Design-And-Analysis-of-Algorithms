@@ -61,36 +61,27 @@ def partition(array, low, high):
 
     for j in range(low, high):
         if array[j] <= pivot:
-
-            # If element smaller than pivot is found
-            # swap it with the greater element pointed by i
             i = i + 1
-
-            # Swapping element at i with element at j
             (array[i], array[j]) = (array[j], array[i])
 
-    # Swap the pivot element with the greater element specified by i
     (array[i + 1], array[high]) = (array[high], array[i + 1])
 
-    # Return the position from where partition is done
     return i + 1
 
 # function to perform quicksort
-
 
 def quickSort(array, low, high):
     if low < high:
 
         pi = partition(array, low, high)
 
-        # Recursive call on the left of pivot
+        # Recursive calls
         quickSort(array, low, pi - 1)
-
-        # Recursive call on the right of pivot
         quickSort(array, pi + 1, high)
 
 
 # Merge Sort Function
+
 def merge(arr, l, m, r):
     n1 = m - l + 1
     n2 = r - m
@@ -118,15 +109,11 @@ def merge(arr, l, m, r):
             j += 1
         k += 1
 
-    # Copy the remaining elements of L[], if there
-    # are any
     while i < n1:
         arr[k] = L[i]
         i += 1
         k += 1
 
-    # Copy the remaining elements of R[], if there
-    # are any
     while j < n2:
         arr[k] = R[j]
         j += 1
@@ -175,16 +162,12 @@ def insertionSort(arr):
 
 def bubblesort(elements):
     swapped = False
-    # Looping from size of array from last index[-1] to index [0]
     for n in range(len(elements)-1, 0, -1):
         for i in range(n):
             if elements[i] > elements[i + 1]:
                 swapped = True
-                # swapping data if the element is less than next element in the array
                 elements[i], elements[i + 1] = elements[i + 1], elements[i]
         if not swapped:
-            # exiting the function if we didn't make a single swap
-            # meaning that the array is already sorted.
             return
 
 
