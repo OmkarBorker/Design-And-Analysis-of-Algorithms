@@ -7,3 +7,7 @@ Repository aimed at visualising the complexcity of algorithms using graphs and d
 # 2)Integer Multiplication
 <br><br/>
 ![alt text](https://github.com/OmkarBorker/Design-And-Analysis-of-Algorithms/blob/main/Images/Multiplication.png)
+
+# 3)Matrix Operations
+<br><br/>
+![alt text](https://github.com/OmkarBorker/Design-And-Analysis-of-Algorithms/blob/main/Images/MatrixOperations.png)
