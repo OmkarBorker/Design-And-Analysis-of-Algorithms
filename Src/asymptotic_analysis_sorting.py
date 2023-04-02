@@ -5,35 +5,22 @@ import matplotlib.pyplot as plt
 
 # Heap Sort Function
 
-
 def heapify(arr, n, i):
-    largest = i  # Initialize largest as root
+    largest = i  
     l = 2 * i + 1  
     r = 2 * i + 2  
-
- # See if left child of root exists and is
- # greater than root
 
     if l < n and arr[i] < arr[l]:
         largest = l
 
- # See if right child of root exists and is
- # greater than root
-
     if r < n and arr[largest] < arr[r]:
         largest = r
-
- # Change root, if needed
 
     if largest != i:
         (arr[i], arr[largest]) = (arr[largest], arr[i])  # swap
 
-  # Heapify the root.
-
         heapify(arr, n, largest)
 
-
-# The main function to sort an array of given size
 
 def heapSort(arr):
     n = len(arr)
@@ -41,29 +28,21 @@ def heapSort(arr):
     for i in range(n // 2 - 1, -1, -1):
         heapify(arr, n, i)
 
- # One by one extract elements
-
     for i in range(n - 1, 0, -1):
-        (arr[i], arr[0]) = (arr[0], arr[i])  # swap
+        (arr[i], arr[0]) = (arr[0], arr[i]) 
         heapify(arr, i, 0)
 
 
 # Quick Sort Function
 
-# Function to find the partition position
 def partition(array, low, high):
-
-    # choose the rightmost element as pivot
     pivot = array[high]
-
-    # pointer for greater element
     i = low - 1
 
     for j in range(low, high):
         if array[j] <= pivot:
             i = i + 1
             (array[i], array[j]) = (array[j], array[i])
-
     (array[i + 1], array[high]) = (array[high], array[i + 1])
 
     return i + 1
@@ -72,10 +51,7 @@ def partition(array, low, high):
 
 def quickSort(array, low, high):
     if low < high:
-
         pi = partition(array, low, high)
-
-        # Recursive calls
         quickSort(array, low, pi - 1)
         quickSort(array, pi + 1, high)
 
@@ -88,7 +64,6 @@ def merge(arr, l, m, r):
 
     L = [0] * (n1)
     R = [0] * (n2)
-
 
     for i in range(0, n1):
         L[i] = arr[l + i]
@@ -130,7 +105,6 @@ def mergeSort(arr, l, r):
 
 # Selection Sort Function
 
-
 def selection_sort(lst):
     n = len(lst)
     for i in range(n - 1):
@@ -141,7 +115,6 @@ def selection_sort(lst):
         lst[i], lst[min] = lst[min], lst[i]
 
 # Function to do insertion sort
-
 
 def insertionSort(arr):
 
@@ -158,7 +131,6 @@ def insertionSort(arr):
         arr[j+1] = key
 
 # BubbleSort Function
-
 
 def bubblesort(elements):
     swapped = False

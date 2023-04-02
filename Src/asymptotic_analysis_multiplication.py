@@ -62,20 +62,16 @@ def DivideAndConquer(X, Y):
 #Karatsuba Algorithm
 
 def Karatsuba(X, Y):
-    
     n = max(len(X), len(Y))
     X = X.zfill(n)
     Y = Y.zfill(n)
  
     # Base case
     if n == 1: return int(X[0])*int(Y[0])
- 
     fh = n//2  
     sh = n - fh  
- 
     Xl = X[:fh]
     Xr = X[fh:]
- 
     Yl = Y[:fh]
     Yr = Y[fh:]
  
@@ -83,7 +79,6 @@ def Karatsuba(X, Y):
     P2 = Karatsuba(Xr, Yr)
     P3 = Karatsuba(str(int(Xl) + int(Xr)), str(int(Yl) + int(Yr)))
  
-    # Combine the three products to get the final result.
     return P1*(1<<(2*sh)) + (P3 - P1 - P2)*(1<<sh) + P2
 
 
