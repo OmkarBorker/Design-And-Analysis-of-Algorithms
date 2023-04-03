@@ -17,3 +17,8 @@ This Repository contains implementation of the key techniques used in algorithm 
 ### 4)Searching Algorithms
 
 ![alt text](https://github.com/OmkarBorker/Design-And-Analysis-of-Algorithms/blob/main/Images/Searching.png)
+
+### 5)Job Scheduling with Priority and length
+
+![alt text](https://github.com/OmkarBorker/Design-And-Analysis-of-Algorithms/blob/main/Images/job_scheduling.png)
+
