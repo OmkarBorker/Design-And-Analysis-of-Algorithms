@@ -1,7 +1,5 @@
-set output 'running_time.png'
-
-set title 'Running Time of Brute-Force String Matching Algorithm'
-set xlabel 'Input Size (n)'
-set ylabel 'Running Time (s)'
-
-plot 'output.txt' using 1:2 with linespoints
+set title "Sorting Algorithms Analysis"
+set xlabel "Number of Elements"
+set ylabel "Time (seconds)"
+set key left top
+plot "output1.txt" using 1:2 with lines title "KMP", \
