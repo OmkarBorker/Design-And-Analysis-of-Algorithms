@@ -1,0 +1,10 @@
+// Minimum Spanning Tree
+graph {
+	A
+	B
+	C
+	D
+	B -- C [label=1]
+	A -- B [label=2]
+	B -- D [label=1]
+}
